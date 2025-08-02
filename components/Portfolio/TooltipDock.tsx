@@ -94,6 +94,12 @@ const technologies = [
     name: "Flutter",
     designation: "Mobile Development",
     icon: Flutter,
+  },
+  {
+    id: 15,
+    name: "Shadcn UI",
+    designation: "UI Components",
+    icon: shadcnui,
   }
 
 ];
