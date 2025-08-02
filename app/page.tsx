@@ -1,8 +1,5 @@
 import { FlipWords } from "@/components/ui/flip-words";
-// import { Spotlight } from "@/components/ui/spotlight";
 import { Spotlight } from "@/components/ui/spotlight-new";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { MorphingText } from "@/components/magicui/morphing-text";
 import { NavbarDemo } from "@/components/Portfolio/HeaderApp";
 
 const words = ["projects", "opportunities", "work", "collaborations", "solutions", "ideas","connections"];
