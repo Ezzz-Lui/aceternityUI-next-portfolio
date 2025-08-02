@@ -242,21 +242,18 @@ export const NavbarLogo = () => {
 
 export const NavbarButton = ({
   href,
-  as: Tag = "a",
   children,
   className,
   variant = "primary",
+  onClick,
   ...props
 }: {
   href?: string;
-  as?: React.ElementType;
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
-} & (
-  | React.ComponentPropsWithoutRef<"a">
-  | React.ComponentPropsWithoutRef<"button">
-)) => {
+  onClick?: () => void;
+} & React.ComponentPropsWithoutRef<"button">) => {
   const baseStyles =
     "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
@@ -269,13 +266,25 @@ export const NavbarButton = ({
       "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   };
 
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={cn(baseStyles, variantStyles[variant], className)}
+        {...(props as React.ComponentPropsWithoutRef<"a">)}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Tag
-      href={href || undefined}
+    <button
+      onClick={onClick}
       className={cn(baseStyles, variantStyles[variant], className)}
       {...props}
     >
       {children}
-    </Tag>
+    </button>
   );
 };
