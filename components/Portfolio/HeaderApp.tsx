@@ -73,7 +73,7 @@ export function NavbarDemo() {
                 variant="primary"
                 className="w-full"
               >
-                Login
+                GitHub
               </NavbarButton>
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
