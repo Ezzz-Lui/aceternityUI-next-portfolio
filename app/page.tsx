@@ -24,17 +24,19 @@ export default function Home() {
         <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
         {FlippingWords}
         </p>
-        <h2 className="text-2xl font-bold text-center text-stone-200 mt-10">Building apps with</h2>
-        <AnimatedTooltipPreview  />
+        <h2 className="text-2xl font-bold text-center text-stone-200 mt-10 mb-2">Building apps with</h2>
+        <div className="flex flex-row items-center justify-center mb-10 w-full px-4 sm:px-6 lg:px-8">
+          <AnimatedTooltipPreview  />
+        </div>
       </div>
       <Spotlight />
       </div>
-      <h1 className="text-5xl font-bold text-stone-200 text-center bg-black">My Projects</h1>
+      {/* <h1 className="text-5xl font-bold text-stone-200 text-center bg-black">My Projects</h1>
       <div className="flex flex-row items-center justify-center bg-black space-x-4 p-4">
         <CardSpotlightDemo />
         <CardSpotlightDemo />
         <CardSpotlightDemo />
-      </div>
+      </div> */}
     </>
   );
 }
