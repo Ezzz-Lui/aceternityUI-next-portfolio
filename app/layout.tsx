@@ -2,8 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/control/ThemeProvider'
-import { NavbarDemo } from '@/components/Portfolio/HeaderApp'
-import { Spotlight } from '@/components/ui/spotlight'
 
 const inter = Inter({ subsets: ['latin'] })
 
