@@ -100,7 +100,7 @@ const technologies = [
 
 export function AnimatedTooltipPreview() {
   return (
-    <div className="flex flex-row items-center justify-center mb-10 w-full px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col items-center justify-center mb-10 w-full px-2 sm:px-4 lg:px-8">
       <AnimatedTooltip items={technologies} />
     </div>
   );
