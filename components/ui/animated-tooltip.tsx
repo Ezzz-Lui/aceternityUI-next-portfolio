@@ -48,10 +48,10 @@ export const AnimatedTooltip = ({
   };
 
   return (
-    <>
+    <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-0">
       {items.map((item) => (
         <div
-          className="group relative -mr-4"
+          className="group relative sm:-mr-4"
           key={item.name}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -90,9 +90,9 @@ export const AnimatedTooltip = ({
           {item.icon ? (
             <div
               onMouseMove={handleMouseMove}
-              className="relative !m-0 h-16 w-16 rounded-full  bg-white/5 backdrop-blur-xs flex items-center justify-center !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
+              className="relative !m-0 h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-white/5 backdrop-blur-xs flex items-center justify-center !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
             >
-              <item.icon className="h-8 w-8 text-white" />
+              <item.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
             </div>
           ) : (
             <Image
@@ -101,11 +101,11 @@ export const AnimatedTooltip = ({
               width={100}
               src={item.image!}
               alt={item.name}
-              className="relative !m-0 h-16 w-16 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
+              className="relative !m-0 h-12 w-12 sm:h-16 sm:w-16 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
             />
           )}
         </div>
       ))}
-    </>
+    </div>
   );
 };
