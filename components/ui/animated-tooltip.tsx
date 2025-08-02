@@ -8,6 +8,7 @@ import {
   useMotionValue,
   useSpring,
 } from "motion/react";
+import Image from "next/image";
 
 export const AnimatedTooltip = ({
   items,
@@ -33,6 +34,7 @@ export const AnimatedTooltip = ({
     springConfig,
   );
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleMouseMove = (event: any) => {
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
@@ -46,7 +48,7 @@ export const AnimatedTooltip = ({
 
   return (
     <>
-      {items.map((item, idx) => (
+      {items.map((item) => (
         <div
           className="group relative -mr-4"
           key={item.name}
@@ -84,7 +86,7 @@ export const AnimatedTooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          <img
+          <Image
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
