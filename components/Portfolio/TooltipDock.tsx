@@ -100,6 +100,12 @@ const technologies = [
     name: "Shadcn UI",
     designation: "UI Components",
     icon: shadcnui,
+  },
+  {
+    id: 16,
+    name: "PostgreSQL",
+    designation: "Database",
+    icon: PostgresqlIcon,
   }
 
 ];
