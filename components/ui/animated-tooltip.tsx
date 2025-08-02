@@ -17,7 +17,8 @@ export const AnimatedTooltip = ({
     id: number;
     name: string;
     designation: string;
-    image: string;
+    icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    image?: string;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -86,14 +87,23 @@ export const AnimatedTooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          <Image
-            onMouseMove={handleMouseMove}
-            height={100}
-            width={100}
-            src={item.image}
-            alt={item.name}
-            className="relative !m-0 h-14 w-14 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
-          />
+          {item.icon ? (
+            <div
+              onMouseMove={handleMouseMove}
+              className="relative !m-0 h-14 w-14 rounded-full  bg-white/5 backdrop-blur-xs flex items-center justify-center !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
+            >
+              <item.icon className="h-8 w-8 text-white" />
+            </div>
+          ) : (
+            <Image
+              onMouseMove={handleMouseMove}
+              height={100}
+              width={100}
+              src={item.image!}
+              alt={item.name}
+              className="relative !m-0 h-14 w-14 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
+            />
+          )}
         </div>
       ))}
     </>
