@@ -4,7 +4,7 @@ import { NavbarDemo } from "@/components/Portfolio/HeaderApp";
 import { AnimatedTooltipPreview } from "@/components/Portfolio/TooltipDock";
 
 const words = ["projects", "opportunities", "work", "collaborations", "solutions", "ideas","connections"];
-const FlippingWords = `I’m passionate about building digital solutions from start to finish. With a strong foundation in both frontend and backend development.`;
+// const FlippingWords = `I’m passionate about building digital solutions from start to finish. With a strong foundation in both frontend and backend development.`;
 export default function Home() {
   return (
     <>
@@ -17,11 +17,12 @@ export default function Home() {
           Available for new <FlipWords words={words} className="text-stone-700" />
         </span>
         </div>
-        <h1 className="text-4xl md:text-8xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-stone-50 to-stone-400 bg-opacity-50">
+        <h1 className="text-5xl md:text-8xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-stone-50 to-stone-400 bg-opacity-50">
         Luis Ramos <br /> Software Developer
         </h1>
-        <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-        {FlippingWords}
+        <p className="subpixel-antialiased mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
+          I’m passionate about building digital solutions from start to finish. With a strong foundation in both frontend and backend development.
+        {/* {FlippingWords} */}
         </p>
         <h2 className="text-xl sm:text-2xl font-bold text-center text-stone-200 mt-8 mb-4">Building apps with</h2>
         <AnimatedTooltipPreview />
