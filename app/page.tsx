@@ -1,7 +1,6 @@
 import { FlipWords } from "@/components/ui/flip-words";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { NavbarDemo } from "@/components/Portfolio/HeaderApp";
-import { CardSpotlightDemo } from "@/components/Portfolio/CardV1";
 import { AnimatedTooltipPreview } from "@/components/Portfolio/TooltipDock";
 
 const words = ["projects", "opportunities", "work", "collaborations", "solutions", "ideas","connections"];
@@ -10,7 +9,7 @@ export default function Home() {
   return (
     <>
       <NavbarDemo />
-      <div className="h-screen w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      <div className="h-dvh w-full rounded-md justify-center items-center flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <Spotlight />
       <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
         <div className="flex justify-center mb-4">
