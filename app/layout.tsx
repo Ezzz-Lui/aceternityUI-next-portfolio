@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/control/ThemeProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Luis Ramos Portfolio',
+  title: 'Luis Ramos - Portfolio',
   description: 'Backend Developer | Azure AI Engineer Associate | Data Analyst Jr',
 }
 
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className='bg-black'>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           
