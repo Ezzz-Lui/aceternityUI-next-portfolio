@@ -2,8 +2,9 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { NavbarDemo } from "@/components/Portfolio/HeaderApp";
 import { AnimatedTooltipPreview } from "@/components/Portfolio/TooltipDock";
-import { CardSpotlightDemo } from "@/components/Portfolio/CardV1";
 import  Blog  from "@/components/Portfolio/ProjectSection";
+import Experience from "@/components/Portfolio/Experience";
+import { MorphingText } from "@/components/magicui/morphing-text";
 
 const words = ["projects", "opportunities", "work", "collaborations", "solutions", "ideas","connections"];
 // const FlippingWords = `I’m passionate about building digital solutions from start to finish. With a strong foundation in both frontend and backend development.`;
@@ -46,8 +47,9 @@ export default function Home() {
       </section> */}
 
       {/* Additional sections can go here */}
-        <Blog />
-      
+      <Experience />
+      <Blog />
+
     </>
   );
 }
