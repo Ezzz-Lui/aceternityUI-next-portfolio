@@ -31,7 +31,7 @@ export default function Home() {
               <FlipWords words={words} className="text-stone-700" />
             </span>
           </div>
-          <h1 className="text-5xl md:text-8xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-stone-50 to-stone-400 bg-opacity-50">
+          <h1 className="text-6xl md:text-8xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-stone-50 to-stone-400 bg-opacity-50">
             Luis Ramos <br /> Software Developer
           </h1>
           <p className="subpixel-antialiased mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
